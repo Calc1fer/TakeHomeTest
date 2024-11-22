@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 159192771220297204}
   - component: {fileID: 7516538565019208064}
   - component: {fileID: 748292140720806385}
-  - component: {fileID: 3150810625565479919}
-  - component: {fileID: 6481053889634263452}
+  - component: {fileID: -5610542361961253280}
+  - component: {fileID: 3449583886282209185}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: Ball_Ex3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,9 +133,9 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 72
+  m_Constraints: 116
   m_CollisionDetection: 2
---- !u!114 &3150810625565479919
+--- !u!114 &-5610542361961253280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,14 +144,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 3345588723074041561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2628a56278135ce49b6ff6933e0bf1a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a70fb98608689549a6c10205391465f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gravityVal: 5
-  _speed: 6.5
-  _levelGeneration: {fileID: 0}
-  _initialPosition: {x: 0, y: 3}
---- !u!114 &6481053889634263452
+  _destinations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _speed: 70
+  _audioManager: {fileID: 0}
+  _particleSystem: {fileID: 0}
+--- !u!114 &3449583886282209185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,6 +163,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3345588723074041561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 609e65731b3274a4e99a5913bedbfd51, type: 3}
+  m_Script: {fileID: 11500000, guid: d36fbf63c69bb2f469149979ebf180ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

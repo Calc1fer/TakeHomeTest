@@ -108,7 +108,7 @@ public class BallController : MonoBehaviour
 
         // Now calculate the horizontal position at this time
         xPosition = p.x + v.x * t;
-        return false;
+        return true;
     }
 
     private void OnCollisionEnter(Collision other)

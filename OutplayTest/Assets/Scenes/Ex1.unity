@@ -175,7 +175,7 @@ MonoBehaviour:
     type: 3}
   _wallThickness: 0.2
   _wallHeightScale: 20
-  _barrierYPos: 3
+  _barrierYPos: 6
 --- !u!1 &1821815651
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,7 +447,7 @@ PrefabInstance:
     - target: {fileID: 3150810625565479919, guid: 267d982a22e74b247af58a25ad9b3567,
         type: 3}
       propertyPath: _initialPosition.y
-      value: 2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3345588723074041561, guid: 267d982a22e74b247af58a25ad9b3567,
         type: 3}
