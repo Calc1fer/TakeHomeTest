@@ -5,7 +5,6 @@ using UnityEngine;
 public class CollisionHandler : MonoBehaviour
 {
     private AudioManager _audioManager;
-    private AudioSource _audioSource;
     private ObjectController _objectController;
 
     private bool _winOrLose = false;
@@ -14,7 +13,6 @@ public class CollisionHandler : MonoBehaviour
     {
         _objectController = GetComponent<ObjectController>();
         _audioManager = _objectController.AudioManager;
-        _audioSource = _audioManager.AudioSource;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,8 +20,7 @@ public class CollisionHandler : MonoBehaviour
         if (other.transform.CompareTag("Entity"))
         {
             Debug.Log("Collision Enter");
-            _audioSource.clip = _audioManager.FailSound;
-            _audioSource.Play();
+            _audioManager.PlaySound(_audioManager.FailSound);
 
             _winOrLose = false;
             CollisionResponse();
@@ -31,8 +28,7 @@ public class CollisionHandler : MonoBehaviour
 
         if (other.transform.CompareTag("FinalDestination"))
         {
-            _audioSource.clip = _audioManager.DestinationSound;
-            _audioSource.Play();
+            _audioManager.PlaySound(_audioManager.DestinationSound);
             
             //Remove object from the scene (Deactivate for future use) 
             _winOrLose = true;

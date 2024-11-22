@@ -108,7 +108,12 @@ public class BallController : MonoBehaviour
 
         // Now calculate the horizontal position at this time
         xPosition = p.x + v.x * t;
-        return true;
+
+        if (xPosition >= (0 - _levelGeneration.Width / 2f) && xPosition <= 0 + _levelGeneration.Width / 2f)
+        {
+            return true;
+        }
+        return false;
     }
 
     private void OnCollisionEnter(Collision other)
